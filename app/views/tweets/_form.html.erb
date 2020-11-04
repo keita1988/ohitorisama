@@ -1,22 +1,41 @@
-<%= form_with local: true do |f|%>
+<%= form_with(model: tweet, local: true) do |f|%>
   <div class="field">
-    <%= f.label :hoge, "プロトタイプの名称" %><br />
-    <%= f.text_field :hoge %>
+    <%= f.label :coffee_price, "コーヒー一杯の値段" %><br />
+    <%= f.text_field :coffee_price %>
+  </div>
+
+<div class="items-detail">
+      <div class="weight-bold-text question-text">
+      </div>
+      <div class="form">
+        <div class="weight-bold-text">
+          美味しさ度
+        </div>
+        <%= f.collection_select(:tasty_id, [], :hoge, :hoge, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+        <div class="weight-bold-text">
+          リラックス度
+        </div>
+        <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"item-prefecture"}) %>
+        <div class="weight-bold-text">
+          アンダーグラウン度
+        </div>
+        <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"item-scheduled-delivery"}) %>
+      </div>
+    </div>
+
+  <div class="field">
+    <%= f.label :store_name, "店名" %><br />
+    <%= f.text_area :store_name, class: :form__text %>
   </div>
 
   <div class="field">
-    <%= f.label :hoge, "キャッチコピー" %><br />
-    <%= f.text_area :hoge, class: :form__text %>
+    <%= f.label :address, "住所" %><br />
+    <%= f.text_area :address, class: :form__text %>
   </div>
 
   <div class="field">
-    <%= f.label :hoge, "コンセプト" %><br />
-    <%= f.text_area :hoge, class: :form__text %>
-  </div>
-
-  <div class="field">
-    <%= f.label :hoge, "プロトタイプの画像" %><br />
-    <%= f.file_field :hoge %>
+    <%= f.label :image, "プロトタイプの画像" %><br />
+    <%= f.file_field :image %>
   </div>
 
   <div class="actions">

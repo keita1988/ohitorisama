@@ -10,6 +10,7 @@ class Tweet < ApplicationRecord
     validates :under_ground
     validates :store_name
     validates :address
+  end
 end
 
 
