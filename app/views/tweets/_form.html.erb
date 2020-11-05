@@ -1,27 +1,23 @@
-<%= form_with(model: tweet, local: true) do |f|%>
+<%= form_with(model: @tweet, local: true) do |f|%>
   <div class="field">
     <%= f.label :coffee_price, "コーヒー一杯の値段" %><br />
     <%= f.text_field :coffee_price %>
   </div>
 
-<div class="items-detail">
-      <div class="weight-bold-text question-text">
-      </div>
-      <div class="form">
-        <div class="weight-bold-text">
-          美味しさ度
-        </div>
-        <%= f.collection_select(:tasty_id, [], :hoge, :hoge, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
-        <div class="weight-bold-text">
-          リラックス度
-        </div>
-        <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"item-prefecture"}) %>
-        <div class="weight-bold-text">
-          アンダーグラウン度
-        </div>
-        <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"item-scheduled-delivery"}) %>
-      </div>
-    </div>
+  <div class="field">
+    <%= f.label :tasty, "美味しさ度" %><br />
+    <%= f.text_area :tasty, class: :form__text %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :relaxation, "リラックス度" %><br />
+    <%= f.text_area :relaxation, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :under_ground, "アンダーグラウン度" %><br />
+    <%= f.text_area :under_ground, class: :form__text %>
+  </div>
 
   <div class="field">
     <%= f.label :store_name, "店名" %><br />
