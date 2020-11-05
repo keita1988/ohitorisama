@@ -1,4 +1,5 @@
 class Tweet < ApplicationRecord
+  extend ActiveHash::Associations::ActiveRecordExtensions
   has_many   :comments
   belongs_to :user
   has_one_attached :image
@@ -11,6 +12,9 @@ class Tweet < ApplicationRecord
     validates :store_name
     validates :address
   end
+
+    # ジャンルの選択が「--」の時は保存できないようにする
+    # validates :tasty, numericality: { other_than: 1 }
 end
 
 
