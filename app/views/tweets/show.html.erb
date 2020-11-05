@@ -2,7 +2,7 @@
   <div class="inner">
     <div class="prototype__wrapper">
       <p class="prototype__hedding">
-        <%= "プロトタイプのタイトル"%>
+        <%= @tweet.store_name%>
       </p>
       <%= link_to "by プロトタイプの投稿者", root_path, class: :prototype__user %>
       <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
@@ -12,18 +12,25 @@
         </div>
       <%# // プロトタイプの投稿者とログインしているユーザーが同じであれば上記を表示する %>
       <div class="tweet__image">
+        <%= image_tag @tweet.image, class: :card_img %>
       </div>
       <div class="prototype__body">
         <div class="prototype__detail">
-          <p class="detail__title">キャッチコピー</p>
+          <p class="detail__title">美味しさ度</p>
           <p class="detail__message">
-            <%= "プロトタイプのキャッチコピー" %>
+            <%= @tweet.tasty %>
           </p>
         </div>
         <div class="prototype__detail">
-          <p class="detail__title">コンセプト</p>
+          <p class="detail__title">リラックス度</p>
           <p class="detail__message">
-            <%= "プロトタイプのコンセプト" %>
+            <%= @tweet.relaxation %>
+          </p>
+        </div>
+        <div class="prototype__detail">
+          <p class="detail__title">アンダーグラウン度</p>
+          <p class="detail__message">
+            <%= @tweet.under_ground %>
           </p>
         </div>
       </div>
