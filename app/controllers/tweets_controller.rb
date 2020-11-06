@@ -22,6 +22,11 @@ class TweetsController < ApplicationController
     @tweet = Tweet.find(params[:id])
   end
 
+  def edit
+  end
+
+  def update
+  end
 
   private
 
