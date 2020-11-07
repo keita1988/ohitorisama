@@ -5,18 +5,18 @@
   </div>
 
   <div class="field">
-    <%= f.label :tasty, "美味しさ度" %><br />
-    <%= f.text_area :tasty, class: :form__text %>
+    <%= f.label :tasty_id, "美味しさ度" %><br />
+    <%= f.collection_select(:tasty_id, Tasty.all, :id, :name, {}, {class:"select-box", id:"tweet-tasty"}) %>
   </div>
   
   <div class="field">
-    <%= f.label :relaxation, "リラックス度" %><br />
-    <%= f.text_area :relaxation, class: :form__text %>
+    <%= f.label :relaxation_id, "リラックス度" %><br />
+    <%= f.collection_select(:relaxation_id, Relaxation.all, :id, :name, {}, {class:"select-box", id:"tweet-relaxation"}) %>
   </div>
 
   <div class="field">
-    <%= f.label :under_ground, "アンダーグラウン度" %><br />
-    <%= f.text_area :under_ground, class: :form__text %>
+    <%= f.label :under_ground_id, "アンダーグラウン度" %><br />
+    <%= f.collection_select(:under_ground_id, UnderGround.all, :id, :name, {}, {class:"select-box", id:"tweet-under_ground"}) %>
   </div>
 
   <div class="field">

@@ -45,9 +45,9 @@ ActiveRecord::Schema.define(version: 2020_11_07_044000) do
 
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "coffee_price", null: false
-    t.integer "tasty", null: false
-    t.integer "relaxation", null: false
-    t.integer "under_ground", null: false
+    t.integer "tasty_id", null: false
+    t.integer "relaxation_id", null: false
+    t.integer "under_ground_id", null: false
     t.string "store_name", null: false
     t.string "address", null: false
     t.bigint "user_id", null: false

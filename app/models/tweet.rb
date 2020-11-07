@@ -4,6 +4,10 @@ class Tweet < ApplicationRecord
   has_many   :comments
   belongs_to :user
   has_one_attached :image
+  belongs_to_active_hash :tasty
+  belongs_to_active_hash :relaxation
+  belongs_to_active_hash :under_ground
+
 
   with_options presence: true do
     validates :coffee_price
@@ -15,7 +19,7 @@ class Tweet < ApplicationRecord
   end
 
     # ジャンルの選択が「--」の時は保存できないようにする
-    validates :tasty, numericality: { other_than: 1 }
+    validates :tasty_id, :relaxation_id, :under_ground_id, numericality: { other_than: 1 }
 end
 
 
