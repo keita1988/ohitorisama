@@ -1,5 +1,6 @@
 class TweetsController < ApplicationController
-  before_action :move_to_edit, except: [:index]
+  before_action :move_to_edit, except: [:index, :show]
+  before_action :authenticate_user!, only: [:show, :new, :edit, :destroy, :create]
 
   def index
     @tweet = Tweet.all
