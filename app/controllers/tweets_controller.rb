@@ -27,6 +27,9 @@ class TweetsController < ApplicationController
 
   def edit
     @tweet = Tweet.find(params[:id])
+    if @prototype.user != current_user
+      redirect_to root_path
+    end
   end
 
   def update
