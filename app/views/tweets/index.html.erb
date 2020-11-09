@@ -2,8 +2,9 @@
   <div class="inner">
     <% if user_signed_in? %>
       <div class="greeting"> 
-         こんにちは、
+         ようこそ！
         <%= link_to "#{current_user.nickname}さん", "/users/#{current_user.id}", method: :get, class: :greeting__link%>
+        お気に入りのカフェを紹介してください！
       </div> 
     <% end %>
     <div class="card__wrapper">
