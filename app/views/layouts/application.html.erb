@@ -17,6 +17,7 @@
           <div class="nav__left">
             <%= link_to image_tag("logo10.png", class: :logo), root_path %>
           </div>
+          <%= link_to "このアプリの使い方", home_index_path, class: :nav__logout %>
           <% if user_signed_in? %>
             <div class="nav__right">
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
