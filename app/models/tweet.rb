@@ -10,7 +10,7 @@ class Tweet < ApplicationRecord
 
 
   with_options presence: true do
-    validates :coffee_price
+    validates :coffee_price, format: { with: /\A[0-9]+\z/ }
     validates :tasty
     validates :relaxation
     validates :under_ground
