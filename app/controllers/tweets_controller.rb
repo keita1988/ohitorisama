@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
   before_action :authenticate_user!, only: [:show, :new, :edit, :destroy, :create]
 
   def index
-    @tweet = Tweet.all
+    @tweet = Tweet.all.order(id: "DESC")
   end
 
   def new
