@@ -1,4 +1,7 @@
 <%= form_with(model: @tweet, local: true) do |f|%>
+
+<%= render 'layouts/error_messages', model: f.object %>
+
   <div class="field">
     <%= f.label :coffee_price, "コーヒー一杯の値段" %><br />
     <%= f.text_field :coffee_price %> 円
