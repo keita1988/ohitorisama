@@ -12,7 +12,8 @@ class TweetsController < ApplicationController
 
   def create
     @tweet = Tweet.create(tweet_params)
-    if @tweet.save
+    if @tweet.valid?
+      @tweet.save
       redirect_to root_path
     else
       render :new
@@ -27,7 +28,7 @@ class TweetsController < ApplicationController
 
   def edit
     @tweet = Tweet.find(params[:id])
-    if @prototype.user != current_user
+    if @tweet.user != current_user
       redirect_to root_path
     end
   end
