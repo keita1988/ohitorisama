@@ -7,6 +7,7 @@ class User < ApplicationRecord
          has_many :comments
 
          with_options presence: true do
-          validates :nickname
-        end
+          validates :nickname, length: { maximum: 3 }
+         end
+        validates :password, length: { minimum: 6 }, confirmation: true
 end
