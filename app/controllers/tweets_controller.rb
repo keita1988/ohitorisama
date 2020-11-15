@@ -51,7 +51,7 @@ class TweetsController < ApplicationController
   private
 
   def tweet_params
-    params.require(:tweet).permit(:coffee_price, :tasty_id, :relaxation_id, :under_ground_id, :store_name, :address, :image).merge(user_id: current_user.id)
+    params.require(:tweet).permit(:coffee_price, :tasty_id, :relaxation_id, :under_ground_id, :wifi_id, :store_name, :address, :image).merge(user_id: current_user.id)
   end
 
   def move_to_edit
