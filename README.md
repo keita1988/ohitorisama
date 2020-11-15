@@ -59,6 +59,7 @@ https://gyazo.com/8815f25deb1ab2a9b53f508e6cc05844
 | under_ground_id | integer | null: false |
 | store_name      | string  | null: false |
 | address         | string  | null: false |
+| wifi_id         | integer | null: false |
 
 ### Association
 
@@ -77,6 +78,5 @@ https://gyazo.com/8815f25deb1ab2a9b53f508e6cc05844
 
 - belongs_to :tweet
 - belongs_to :user
-
-
+    
 
