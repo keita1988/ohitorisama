@@ -62,6 +62,7 @@ https://gyazo.com/8815f25deb1ab2a9b53f508e6cc05844
 | wifi_id         | integer | null: false |
 
 
+
 ### Association
 
 - has_many :comments
